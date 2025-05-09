@@ -1,0 +1,322 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     12935,        314]
+NotebookOptionsPosition[     12227,        294]
+NotebookOutlinePosition[     12663,        311]
+CellTagsIndexPosition[     12620,        308]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"p", "[", "\[Nu]_", "]"}], ":=", 
+    RowBox[{
+     FractionBox[
+      RowBox[{"8", "\[Pi]", "\[Times]", "h"}], 
+      SuperscriptBox["c", "3"]], "\[Times]", 
+     FractionBox["1", 
+      RowBox[{
+       SuperscriptBox["\[ExponentialE]", 
+        FractionBox[
+         RowBox[{"h", "\[Times]", "\[Nu]"}], 
+         RowBox[{
+          SubscriptBox["k", "B"], "\[Times]", "T"}]]], "-", "1"}]], 
+     "\[Times]", 
+     SuperscriptBox["\[Nu]", "3"]}]}], ";"}], 
+  RowBox[{"(*", 
+   RowBox[{"Planck", " ", "Radiation", " ", "Law"}], 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"w", "[", "\[Nu]_", "]"}], ":=", 
+    RowBox[{
+     FractionBox[
+      RowBox[{"8", "\[Pi]", "\[Times]", 
+       SubscriptBox["k", "B"], "\[Times]", "\[Beta]"}], 
+      SuperscriptBox["c", "3"]], "\[Times]", 
+     SuperscriptBox["\[ExponentialE]", 
+      FractionBox[
+       RowBox[{
+        RowBox[{"-", "\[Beta]"}], "\[Times]", "\[Nu]"}], "T"]], "\[Times]", 
+     SuperscriptBox["\[Nu]", "3"]}]}], ";"}], 
+  RowBox[{"(*", 
+   RowBox[{"Wien", " ", "Radiation", " ", "Law"}], 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"r", "[", "\[Nu]_", "]"}], ":=", 
+    RowBox[{
+     FractionBox[
+      RowBox[{"8", "\[Pi]", "\[Times]", 
+       SubscriptBox["k", "B"], "\[Times]", "T"}], 
+      SuperscriptBox["c", "3"]], "\[Times]", 
+     SuperscriptBox["\[Nu]", "2"]}]}], ";"}], 
+  RowBox[{"(*", 
+   RowBox[{"Rayleigh", "-", 
+    RowBox[{"Jeans", " ", "Radiation", " ", "Law"}]}], 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"h", "=", 
+    RowBox[{"6.62606957", "\[Times]", 
+     SuperscriptBox["10", 
+      RowBox[{"-", "34"}]]}]}], ";"}], 
+  RowBox[{"(*", 
+   RowBox[{"Planck", " ", "Constant"}], "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"c", "=", 
+    RowBox[{"2.99792458", "\[Times]", 
+     SuperscriptBox["10", "8"]}]}], ";"}], 
+  RowBox[{"(*", 
+   RowBox[{"Speed", " ", "of", " ", "Light"}], 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    SubscriptBox["k", "B"], "=", 
+    RowBox[{"1.38065", "\[Times]", 
+     SuperscriptBox["10", 
+      RowBox[{"-", "23"}]]}]}], ";"}], 
+  RowBox[{"(*", 
+   RowBox[{"Boltzmann", " ", "Constant"}], "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"\[Beta]", "=", 
+    RowBox[{"4.799237", "\[Times]", 
+     SuperscriptBox["10", 
+      RowBox[{"-", "11"}]]}]}], ";"}], 
+  RowBox[{"(*", 
+   RowBox[{"Wien", " ", "Constant"}], "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{"Plot", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{
+        FractionBox[
+         RowBox[{"8", "\[Pi]", " ", 
+          SuperscriptBox["\[Nu]", "2"], " "}], 
+         SuperscriptBox["c", "3"]], 
+        FractionBox[
+         RowBox[{"h", " ", "\[Nu]"}], 
+         RowBox[{
+          SuperscriptBox["\[ExponentialE]", 
+           FractionBox[
+            RowBox[{"h", " ", "\[Nu]"}], 
+            RowBox[{
+             SubscriptBox["k", "B"], " ", "T"}]]], "-", "1"}]]}], " ", ",", 
+       RowBox[{
+        FractionBox[
+         RowBox[{"8", "\[Pi]", " ", 
+          SubscriptBox["k", "B"], " ", "\[Beta]"}], 
+         SuperscriptBox["c", "3"]], 
+        SuperscriptBox["\[ExponentialE]", 
+         FractionBox[
+          RowBox[{
+           RowBox[{"-", "\[Beta]"}], " ", "\[Nu]"}], "T"]], 
+        SuperscriptBox["\[Nu]", "3"]}], ",", 
+       RowBox[{
+        FractionBox[
+         RowBox[{"8", "\[Pi]", "  ", 
+          SuperscriptBox["\[Nu]", "2"]}], 
+         SuperscriptBox["c", "3"]], 
+        SubscriptBox["k", "B"], "T"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"\[Nu]", ",", "0", ",", 
+       RowBox[{"3", "\[Times]", 
+        SuperscriptBox["10", "14"]}]}], "}"}], ",", 
+     RowBox[{"PlotRange", "->", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          SuperscriptBox["10", "13"], ",", 
+          RowBox[{"30", "\[Times]", 
+           SuperscriptBox["10", "13"]}]}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"0", ",", 
+          RowBox[{"10", "\[Times]", 
+           SuperscriptBox["10", 
+            RowBox[{"-", "17"}]]}]}], "}"}]}], "}"}]}], ",", 
+     RowBox[{"PlotLabel", "\[Rule]", 
+      RowBox[{"Style", "[", 
+       RowBox[{
+       "\"\<Three kinds of spectrum of blackbody radiation\>\"", ",", 
+        RowBox[{"FontSize", "\[Rule]", "16"}]}], "]"}]}], ",", 
+     RowBox[{"PlotStyle", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"Red", ",", "Green", ",", "Blue"}], "}"}]}], ",", 
+     RowBox[{"AxesLabel", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+       "\"\<Frequency (\!\(\*StyleBox[SuperscriptBox[\"s\", RowBox[{\"-\", \
+\"1\"}]], \"Input\"]\)\!\(\*StyleBox[\")\", \"Input\"]\)\>\"", ",", 
+        "\"\<Intensity (J*s/\!\(\*SuperscriptBox[\(m\), \(3\)]\))\>\""}], 
+       "}"}]}], ",", 
+     RowBox[{"PlotLegends", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+       "\"\<Planck Radiation Law\>\"", ",", "\"\<Wien Radiation Law\>\"", 
+        ",", "\"\<Rayleigh Jeans Radiation Law\>\""}], "}"}]}], ",", 
+     RowBox[{"ImageSize", "\[Rule]", "450"}]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"T", ",", "300", ",", "3000"}], "}"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.84303489545041*^9, 3.843034914340828*^9}, {
+   3.843034983701638*^9, 3.843035112102043*^9}, {3.843035201802293*^9, 
+   3.843035242963558*^9}, {3.8430353414138308`*^9, 3.843035375092593*^9}, {
+   3.8430354662685833`*^9, 3.8430355033941593`*^9}, {3.843035622417268*^9, 
+   3.8430356551070232`*^9}, 3.8430356902458487`*^9, {3.8430357730599747`*^9, 
+   3.843035854997356*^9}, {3.843035944342428*^9, 3.843036513047393*^9}, {
+   3.843036555435803*^9, 3.843036577944577*^9}, {3.8430366491834297`*^9, 
+   3.843036837343334*^9}, {3.843036874122539*^9, 3.843036879390071*^9}, {
+   3.84303704094407*^9, 3.843037225100502*^9}, {3.843037265748398*^9, 
+   3.843037321885171*^9}, {3.843037369997753*^9, 3.843037373827251*^9}, {
+   3.843037413329611*^9, 3.8430375160329943`*^9}, 3.8430375915946007`*^9, {
+   3.84303776759163*^9, 3.843037804645857*^9}, {3.843038035470522*^9, 
+   3.8430381036089478`*^9}, {3.8430381598049183`*^9, 3.843038189891478*^9}, {
+   3.843042909404772*^9, 3.843042922377615*^9}, {3.843042952636765*^9, 
+   3.843042959896734*^9}, {3.843043052352199*^9, 3.843043115850568*^9}, {
+   3.8430432751759377`*^9, 3.843043673876431*^9}, {3.843045033365097*^9, 
+   3.843045035790759*^9}, {3.8430451051229773`*^9, 3.843045349868491*^9}, {
+   3.84304538875347*^9, 3.843045486329739*^9}, {3.843045550635953*^9, 
+   3.843045556908568*^9}, {3.843045779549425*^9, 3.843045868883595*^9}, {
+   3.843045923533469*^9, 3.8430459937131643`*^9}, {3.8430460727223463`*^9, 
+   3.8430461009128017`*^9}, {3.843046139563808*^9, 3.8430461520126333`*^9}, {
+   3.8430461896885777`*^9, 3.843046231340756*^9}, {3.843087916859891*^9, 
+   3.843088010221704*^9}, {3.8430880980597763`*^9, 3.843088145711565*^9}, {
+   3.843088192432796*^9, 3.843088294465988*^9}, {3.8430888640075073`*^9, 
+   3.843088906955469*^9}, {3.843620674560397*^9, 3.843620706883563*^9}, {
+   3.8436208394497843`*^9, 3.843620844588539*^9}, {3.843620877053544*^9, 
+   3.843620880038546*^9}, 3.8440630481417303`*^9, {3.914019195846778*^9, 
+   3.9140191959782467`*^9}, {3.9140192293199883`*^9, 
+   3.9140192934631357`*^9}, {3.91401932725028*^9, 3.914019353555316*^9}, {
+   3.914323597836132*^9, 3.914323599371961*^9}, {3.914381320748269*^9, 
+   3.914381438986608*^9}, {3.914483693329609*^9, 3.914483731146472*^9}},
+ CellLabel->"In[5]:=",ExpressionUUID->"c3530f96-e08d-43ab-8020-403ed0b80da0"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`T$$ = 1280., Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`T$$], 300, 3000}}, Typeset`size$$ = {
+    839., {157., 164.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = True}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {$CellContext`T$$ = 300}, 
+      "ControllerVariables" :> {}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> 
+      Plot[{(8 Pi $CellContext`\[Nu]^2/$CellContext`c^3) ($CellContext`h \
+$CellContext`\[Nu]/(
+          E^($CellContext`h $CellContext`\[Nu]/(
+            Subscript[$CellContext`k, $CellContext`B] $CellContext`T$$)) - 
+          1)), (8 Pi 
+          Subscript[$CellContext`k, $CellContext`B] \
+$CellContext`\[Beta]/$CellContext`c^3) 
+         E^((-$CellContext`\[Beta]) $CellContext`\[Nu]/$CellContext`T$$) \
+$CellContext`\[Nu]^3, (8 Pi $CellContext`\[Nu]^2/$CellContext`c^3) 
+         Subscript[$CellContext`k, $CellContext`B] $CellContext`T$$}, \
+{$CellContext`\[Nu], 0, 3 10^14}, 
+        PlotRange -> {{10^13, 30 10^13}, {0, 10 10^(-17)}}, PlotLabel -> 
+        Style["Three kinds of spectrum of blackbody radiation", FontSize -> 
+          16], PlotStyle -> {Red, Green, Blue}, 
+        AxesLabel -> {
+         "Frequency (\!\(\*StyleBox[SuperscriptBox[\"s\", RowBox[{\"-\", \
+\"1\"}]], \"Input\"]\)\!\(\*StyleBox[\")\", \"Input\"]\)", 
+          "Intensity (J*s/\!\(\*SuperscriptBox[\(m\), \(3\)]\))"}, 
+        PlotLegends -> {
+         "Planck Radiation Law", "Wien Radiation Law", 
+          "Rayleigh Jeans Radiation Law"}, ImageSize -> 450], 
+      "Specifications" :> {{$CellContext`T$$, 300, 3000}}, "Options" :> {}, 
+      "DefaultOptions" :> {}],
+     ImageSizeCache->{894., {210., 217.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{{3.843088207978314*^9, 3.8430882997253313`*^9}, {
+   3.843088871804652*^9, 3.843088907509988*^9}, 3.843119794633274*^9, {
+   3.843503831885314*^9, 3.843503854717127*^9}, {3.843503888892541*^9, 
+   3.8435039171525097`*^9}, {3.84350394989324*^9, 3.843503960467977*^9}, 
+   3.843510130433958*^9, 3.843620709222911*^9, 3.8436208814969273`*^9, {
+   3.8442062819170313`*^9, 3.844206283864715*^9}, {3.8471624158086977`*^9, 
+   3.847162427443453*^9}, {3.847492283942099*^9, 3.847492285869605*^9}, {
+   3.8761793412710457`*^9, 3.87617934735603*^9}, {3.87799766344069*^9, 
+   3.8779976683317213`*^9}, {3.914019169804495*^9, 3.9140191784283457`*^9}, {
+   3.9140192254908857`*^9, 3.91401935393857*^9}, {3.914132902505392*^9, 
+   3.9141329254158297`*^9}, {3.914323550088682*^9, 3.914323608552174*^9}, {
+   3.91438135077721*^9, 3.914381439234514*^9}, 3.91448364957766*^9, 
+   3.914483700397518*^9, 3.91448373649578*^9, 3.919306789716813*^9},
+ CellLabel->"Out[12]=",ExpressionUUID->"b2c7a015-b996-4168-9afe-e70794133e03"]
+}, Open  ]],
+
+Cell[BoxData["\:3000"], "Input",
+ CellChangeTimes->{
+  3.914323634717167*^9},ExpressionUUID->"07b315c5-1cf1-4249-9eaa-\
+cc5fa48f3b8c"],
+
+Cell[BoxData[
+ RowBox[{"Clear", "[", "\"\<Global`*\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.914028678100542*^9, 3.9140286781029778`*^9}},
+ CellLabel->
+  "In[341]:=",ExpressionUUID->"0b2ce4d2-230f-426b-bdc8-5f128a459364"]
+},
+WindowSize->{1440, 793},
+WindowMargins->{{558, Automatic}, {194, Automatic}},
+TaggingRules->{"TryRealOnly" -> False},
+FrontEndVersion->"12.3 for Mac OS X ARM (64-bit) (July 24, 2021)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"ea8b77cd-af42-4f51-bf45-c64daadecbb6"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 7668, 191, 558, "Input",ExpressionUUID->"c3530f96-e08d-43ab-8020-403ed0b80da0"],
+Cell[8251, 215, 3596, 65, 450, "Output",ExpressionUUID->"b2c7a015-b996-4168-9afe-e70794133e03"]
+}, Open  ]],
+Cell[11862, 283, 134, 3, 37, "Input",ExpressionUUID->"07b315c5-1cf1-4249-9eaa-cc5fa48f3b8c"],
+Cell[11999, 288, 224, 4, 54, "Input",ExpressionUUID->"0b2ce4d2-230f-426b-bdc8-5f128a459364"]
+}
+]
+*)
+
